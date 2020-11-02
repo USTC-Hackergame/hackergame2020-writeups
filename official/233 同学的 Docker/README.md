@@ -24,7 +24,7 @@ docker pull 8b8d3c8324c7/stringtool
 
 ### Docker 镜像分析
 
-这里有诸多手段，可以供大家参考。
+有诸多手段可以供大家使用。
 
 1. 直接在 Docker Hub 的 [Image Layers](https://hub.docker.com/layers/8b8d3c8324c7/stringtool/latest/images/sha256-aef87a00ad7a4e240e4b475ea265d3818c694034c26ec227d8d4f445f3d93152?context=repo) 页面上看。
 2. 使用 [`dive`](https://github.com/wagoodman/dive)。
@@ -34,7 +34,7 @@ docker pull 8b8d3c8324c7/stringtool
 
 ### 提取文件
 
-这里也有诸多手段，一种简单的方法是使用 `docker save`。当然，还有不少别的方法，可以自行搜索探索。
+这里也有诸多手段。一种简单且所有系统通用的方法是使用 `docker save`，下面仅介绍这种方法。
 
 ```
 docker save 8b8d3c8324c7/stringtool > img.tar
