@@ -1,9 +1,4 @@
 ---
-enabled: true
-name: Flag 计算机
-category: binary
-url: files/get_flag_system.exe
-index: 270
 flags:
 - name: ''
   score: 300
