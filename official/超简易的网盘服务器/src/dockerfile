@@ -1,0 +1,28 @@
+FROM alpine:latest
+EXPOSE 10120
+WORKDIR /var/www/html
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
+    && apk add nginx supervisor php7-fpm php7-session php7-json php7-gd php7-exif git wget unzip zip\
+    && mkdir -p /var/www/html/Public \
+    && wget https://release.larsjung.de/h5ai/h5ai-0.29.2.zip \
+    && unzip h5ai-0.29.2.zip \
+    && cp -rp /var/www/html/_h5ai  /var/www/html/Public/_h5ai \
+    && rm h5ai-0.29.2.zip \
+    && mkdir /run/nginx
+
+ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD ./nginx.conf /etc/nginx/nginx.conf
+ADD ./php.ini /etc/php7/php.ini
+RUN rm /etc/nginx/conf.d/default.conf
+
+RUN chown -R nobody.nobody /var/www/html && \
+  chown -R nobody.nobody /run && \
+  chown -R nobody.nobody /var/lib/nginx && \
+  chown -R nobody.nobody /var/log/nginx && \
+  chown -R nobody.nobody /var/log/php7
+
+USER nobody
+ADD --chown=nobody ./flag.txt /var/www/html/
+ADD --chown=nobody ./dockerfile ./nginx.conf /var/www/html/Public/
+
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

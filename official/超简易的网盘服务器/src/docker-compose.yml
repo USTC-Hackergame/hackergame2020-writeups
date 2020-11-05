@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+  h5ai:
+    build: .
+    ports:
+     - 10120:10120
+    volumes:
+      - type: volume
+        source: cloud
+        target: /var/www/html
+        read_only: true
+    restart: always
+
+volumes:
+  cloud:

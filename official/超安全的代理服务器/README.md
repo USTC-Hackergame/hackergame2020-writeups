@@ -1,6 +1,6 @@
 # 超安全的代理服务器
 
-本地源代码在 (src)[./src/smart_proxy] 文件夹下。
+本地源代码在 src 文件夹下。
 
 ## 考察内容
 
@@ -23,7 +23,7 @@
 ### Method 1. 使用 Wireshark 抓包分析
 一种很直观的查看方式是直接抓取原始流量进行分析，但是困难在于 h2 内容 大多经过 TLS 协议加密，因此直接查看只能看到加密后的内容。解决方法是提取浏览器中的 TLS 会话秘钥，就可以进行抓包和解密了。具体细节参见：[这一篇文章](https://cloud.tencent.com/developer/article/1416948)
 
-我们使用类似下面的命令可以启动浏览器并导出 TLS 秘钥，并使用 Wireshark 可以抓取到加密的 HTTP2 流量，我们观察到有 Promise Push 的内容，具体是一个 URL。我们访问这个 URL 即可得到**代理凭证 secret** 和第一个**flag**
+我们使用类似下面的命令可以启动浏览器并导出 TLS 秘钥，并使用 Wireshark 可以抓取到加密的 HTTP2 流量，我们观察到有 PUSH_PROMISE 的内容，具体是一个 URL。我们访问这个 URL 即可得到**代理凭证 secret** 和第一个**flag**
 ![pic/pic_1.png](pic/pic_1.png)
 
 ### Method 2. 使用 nghttp2 工具调试 HTTP2
