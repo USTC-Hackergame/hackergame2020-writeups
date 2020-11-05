@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>普通的身份认证器</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="static/user.css">
+    </head>
+    <body>
+        <noscript>
+            Although not necessary...
+            It's recommended to enable JavaScript to solve this problem.
+        </noscript>
+        <div id="app">
+            <input v-model.trim="token" placeholder="在这里输入比赛 token...">
+            <button @click='login'>以 Guest 登录</button>
+            <button @click='getProfile'>获取用户信息</button>
+            <div class="text-block">
+                <p>{{ message }}</p>
+            </div>
+        </div>
+        <!-- Powered by FastAPI, Axios and Vue.js -->
+        <script src="static/axios.min.js"></script>
+        <script src="static/vue.js"></script>
+
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    message: '请点击登录...',
+                    jwt: null,
+                    token: null,
+                },
+                methods: {
+                    login: function () {
+                        if (this.token) {
+                            axios.post('/token', null, {
+                                headers: {
+                                    "Hg-Token": this.token
+                                }
+                            }).then(
+                                response => {
+                                    this.jwt = response.data.access_token
+                                    this.message = '登录成功。'
+                                }
+                            ).catch(
+                                error => {
+                                    this.message = this.errorOutput(error);
+                                }
+                            )
+                        } else {
+                            this.message = '请输入你的比赛 token。';
+                        }
+                    },
+                    getProfile: function () {
+                        if (!this.jwt) {
+                            this.message = '请先登录。';
+                        }
+                        else if (this.token) {
+                            axios.get('/profile', {
+                                headers: {
+                                    Authorization: 'Bearer ' + this.jwt,
+                                    "Hg-Token": this.token
+                                }
+                            }).then(
+                                response => {
+                                    this.message = response.data;
+                                }
+                            ).catch(
+                                error => {
+                                    this.message = this.errorOutput(error);
+                                }
+                            );
+                        } else {
+                            this.message = '请输入你的比赛 token。';
+                        }
+                    },
+                    errorOutput: function (error) {
+                        if (error.response) {
+                            return error.response.data.detail + "(" + error.response.status + ")";
+                        } else if (error.request) {
+                            return "未能连接到后端服务器。";
+                        } else {
+                            return "未知错误: " + error.message;
+                        }
+                    }
+                },
+                mounted: function () {
+                    const token = new URLSearchParams(window.location.search).get("token");
+                    window.history.replaceState({}, null, '/');
+                    if (token) {
+                        this.token = token;
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
