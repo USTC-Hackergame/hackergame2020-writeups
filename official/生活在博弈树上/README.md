@@ -15,7 +15,7 @@ x = input[1] - '0';
 y = input[3] - '0';
 ```
 
-尽管很多初学 C 语言的同学会使用 `gets()` 去读取一行字符串（至少我所观察到很多没有编程基础初学 C 语言的大一新生会这么做），但是这个函数是非常危险的：它不会限制输入的长度，可以构造出长度大于接受输入的数组长度的字符串，从而实现一些“意料之外”的事情。
+尽管很多初学 C 语言的同学会使用 `gets()` 去读取一行字符串（至少我所观察到很多没有编程基础初学 C 语言的大一新生会这么做，因为确实“很方便”），但是这个函数是非常危险的：它不会限制输入的长度，可以构造出长度大于接受输入的数组长度的字符串，从而实现一些“意料之外”的事情。1988 年，知名的 [Morris Worm](https://en.wikipedia.org/wiki/Morris_worm) 就通过[利用程序 `figure` 中使用 `gets()` 获取输入的问题](http://www.cs.unc.edu/~jeffay/courses/nidsS05/attacks/seely-RTMworm-89.html#p4.5.2)，对当时互联网上的机器带来了巨大的破坏。
 
 为了获得第一个 flag，我们的目标是让程序运行 `success` 分支，输出 flag。正常下井字棋是肯定赢不了的（除非我代码写错了 :)），那么我们就需要在程序运行时想办法让 `success` 的值变为 `true` (1)，然后就能立刻跳出 `while` 循环而胜利。可以注意到，在变量定义的时候，`success` 就贴在 `input` 数组的旁边。
 
@@ -24,13 +24,33 @@ bool success = false;  // human wins?
 char input[128] = {};  // input is large and it will be ok.
 ```
 
-那么我们能不能在 `gets` 的时候，就把 `success` 弄成 `true` 呢？答案是可以的！
+那么我们能不能在 `gets` 的时候，就把 `success` 弄成 `true` 呢？对于本题给出的二进制程序文件，答案是可以的！
+
+### 分析
+
+为了判断栈上 `input` 和 `success` 这两个变量的位置，我们需要使用调试工具，或者反编译工具去判断。
 
 [TBD]
 
 
 ## 升上天空
 
-第一题的 flag 提示我们要 getshell 得到第二个 flag。使用 `checksec` 检查程序文件。
+第一题的 flag 提示我们要 getshell 得到第二个 flag。使用 `checksec` 和 `file` 检查程序文件。
+
+```shell
+$ checksec -f tictactoe
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      Symbols         FORTIFY Fortified       Fortifiable  FILE
+Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   1891 Symbols    Yes     14              55      tictactoe
+$ file tictactoe
+tictactoe: ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux), statically linked, for GNU/Linux 3.2.0, BuildID[sha1]=669c2d3e3b669e5d05e627b3c94640234927e172, not stripped
+```
+
+我们可以看到：
+
+- NX enabled，表明可以被程序写入的内存页是不可执行的。也就是说，我们不能直接用 `gets()` 在栈上放置可执行的 shellcode，然后让程序去执行。
+- Canary found，说明程序中有函数有 canary（但是如果去看 `main()` 的汇编就能发现，`main()` 是没有 canary 的），结合 `file` 输出 `statically linked`，这里的 canary 提示可能是被静态链接入程序的 C 库引入的。
+- NO PIE，意味着没有地址随机化，我们不需要考虑动态获取地址的问题。
+
+所以考虑使用 ROP 来获取服务器的 shell。由于这个程序是静态链接的，被链接的 C 库中就包含了很多可以被利用的 gadgets，所以考虑使用 ROPgadget 来自动生成 payload。
 
 [TBD]
