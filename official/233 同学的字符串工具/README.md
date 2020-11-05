@@ -1,6 +1,6 @@
 # 233 同学的字符串工具
 
-[这道题的源代码 string_tool.py](./string_tool.py)
+[这道题的源代码 string_tool.py](./src/string_tool.py)
 
 ## 命题背景与思路
 

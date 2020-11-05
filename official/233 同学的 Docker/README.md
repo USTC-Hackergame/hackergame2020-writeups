@@ -1,6 +1,6 @@
 # 233 同学的 Docker
 
-[这道题的 Dockerfile](./Dockerfile)
+[这道题的 Dockerfile](./src/Dockerfile)
 
 ## 命题背景与思路
 
