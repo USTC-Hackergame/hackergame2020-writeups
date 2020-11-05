@@ -24,13 +24,15 @@ bool success = false;  // human wins?
 char input[128] = {};  // input is large and it will be ok.
 ```
 
-那么我们能不能在 `gets` 的时候，就把 `success` 弄成 `true` 呢？对于本题给出的二进制程序文件，答案是可以的！
+那么我们能不能在 `gets` 的时候，就把 `success` 弄成 `true` 呢？对于本题给出的二进制程序文件，答案是可以的！（视编译器、编译选项的不同，这个答案可能会发生变化，所以要以给定的二进制文件为准）
 
 ### 分析
 
-为了判断栈上 `input` 和 `success` 这两个变量的位置，我们需要使用调试工具，或者反编译工具去判断。
+为了判断栈上 `input` 和 `success` 这两个变量的位置，我们需要使用调试工具，或者反编译工具去判断。这里以 IDA 为例。
 
-[TBD]
+![Variables on stack](README.assets/1.png)
+
+可以看到，变量 `input` 距离栈帧基址 (BP) 有 0x90 bytes，变量 `success` 距离栈帧基址有 0x1 bytes，所以输入 143 个字符之后，输入值为 0x1 的字符（注意，不是 `'1'`），将 `success` 覆盖为 `true` (1) 即可。
 
 
 ## 升上天空
@@ -53,4 +55,4 @@ tictactoe: ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux), statically 
 
 所以考虑使用 ROP 来获取服务器的 shell。由于这个程序是静态链接的，被链接的 C 库中就包含了很多可以被利用的 gadgets，所以考虑使用 ROPgadget 来自动生成 payload。
 
-[TBD]
+ROPgadget 生成的 payload 前面需要加上 padding，使得 payload 能够正好从函数返回地址开始覆盖。从上图我们可以看到，为了从 r（返回地址）开始，我们的 padding 长度应该是 0x8 - (-0x90) = 152。（s 代表是保存的寄存器等调用者函数的现场）
