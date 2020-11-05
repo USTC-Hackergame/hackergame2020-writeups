@@ -37,9 +37,9 @@ $ dd if=target.img of=swap.img bs=512 count=1497088 skip=393216
 $ dd if=target.img of=chome.img bs=512 count=1998848 skip=1892352
 ```
 
-用 file 查看一下并尝试 mount ，看出主分区是 ext4 格式的 boot 分区； 976M 分区 LUKS 加密，应该是题目中描述的家目录所在分区； swap 内有 SWSUSP1 镜像，表示有休眠存在；最后一个 6.1GB 分区只能是根分区了，因为虽然磁盘只得到了一小部分，分区表仍然是正常的。
+用 file 查看一下并尝试 mount ，看出主分区是 ext4 格式的 boot 分区； 976M 分区 LUKS 加密，应该是题目中描述的家目录所在分区； swap 内有 SWSUSP1 镜像，表示有休眠存在；最后一个 6.1GB 分区应该只能是根分区了。因为虽然磁盘只得到了一小部分，分区表仍然完整并会显示出所有的分区。
 
-那么之后自然的思路是看看 boot 内有没有东西，毕竟有些不太注意安全的人是会图方便把 LUKS 的key 放在 boot 中以便开机输入密码的。于是：
+那么之后自然的思路是看看 boot 内有没有东西，毕竟有些不太注意安全的人是会图方便把 LUKS 的key 放在 boot 中以便开机不用输入密码的。于是：
 
 ```
 $ sudo mount boot.img /mnt
@@ -49,9 +49,9 @@ I'm not that stupid to put plaintext key in /boot!
 
 信不信由你，我是信了。
 
-那怎么办呢？ AES 又不能破解，那就只有 swap 和根分区有戏了。
+那怎么办呢？ AES 又不能爆破，那就只有 swap 和根分区有戏了。
 
-根分区只有一点点，但也可以通过 testdisk 之类看看内容，或者 strings 一下... 要是有更多的非预期解那也算是 OK 了。
+根分区只有一点点，但也可以通过 testdisk 之类看看内容，或者 strings 一下... 要是有更多的非预期解那也算是 OK 的。
 
 那就看 swap 吧，既然休眠，那估计整个内存 dump 都在里头了，那就找一下 AES key 吧 -- 这一步萌新出题人不太清楚做题的人能不能想到，出题灵感来源于 cold boot attack ，本想弄一个真实冷启动 dump 出的内存镜像，但鉴于能力和成本不够，就索性用休眠导致的 memory dump 了。
 
@@ -126,7 +126,7 @@ https://blog.appsecco.com/breaking-full-disk-encryption-from-a-memory-dump-5a868
 https://access.redhat.com/solutions/1543373
 ```
 
-注意，第一篇文章中一个有问题的地方是 LUKS 分区的大小和物理分区大小不同，所以用里面类似于 `echo "0 <size> crypt aes-xts-plain64 <key> 0 </dev/drive> 4096" | sudo dmsetup create luks-volume` 的方法是不行的，并且其实具体的加密方式题目中也没有提到。你可以自己创建一个 LUKS 分区实验一下，对于题目，二者差了 4096 字节。而红帽文章中直接用 master key 添加 key slot 的方法不需要知道这些信息。但本人也不是专业人士，具体细节还要以正规渠道得到的信息为准。
+注意，第一篇文章中一个有问题的地方是 LUKS 分区的大小和物理分区大小不同（你可以自己创建一个 LUKS 分区实验一下，对于题目，二者差了 4096 字节），所以用里面类似于 `echo "0 <size> crypt aes-xts-plain64 <key> 0 </dev/drive> 4096" | sudo dmsetup create luks-volume` 的方法是不行的，并且具体的加密方式题目中也没有提到。而红帽文章中直接用 master key 添加 key slot 的方法不需要知道这些信息。但本人也不是专业人士，具体细节还要以正规渠道得到的信息为准。
 
 如果你能够搜到这两篇文章，尤其是第一篇（其实还是比较容易搜到的），那应该可以解出这个题了。
 
@@ -134,9 +134,9 @@ https://access.redhat.com/solutions/1543373
 
 ### 一个非预期解
 
-不知是因为 LUKS 分区打开的时候本该如此，还是出题人操作不慎在分区创建的时候密码复制到了剪贴板上，密码本身明文在 swap 中出现了，所以 strings 一下然后逐个字符串尝试就可以求解。但感觉其实这样做出来也算是正常解法了。密码是什么就留作练习吧。
+不知是因为 LUKS 分区打开的时候本该如此，还是出题人操作不慎在分区创建的时候密码复制到了剪贴板上，密码本身明文在 swap 中出现了，所以 strings 一下然后逐个字符串尝试就可以求解。但感觉其实这样做出来也算是正常解法了。密码是什么留作练习。
 
 ### 其他可能方法
 
-本题目的制作方法是在虚拟机装装上 xubuntu ，休眠之后 dump 出磁盘的一部分。就算不知道这个过程，一个自然的想法是尝试恢复启动，在 Linux 启动至 initrd 时进行分析（libreliu的思路）。
+本题目的制作方法是在虚拟机装装上 xubuntu ，休眠之后 dump 出磁盘的一部分。就算不知道这个过程，一个自然的想法是尝试恢复启动，在 Linux 启动至 initrd 时进行分析（libreliu的思路）。我没有试过，也留作练习。
 
