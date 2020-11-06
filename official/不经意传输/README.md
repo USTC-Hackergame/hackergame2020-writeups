@@ -24,7 +24,7 @@
 
 题目的缺陷在于，m0 和 m1 都是十六进制编码之后的字符串，每个字符都是在 0~9 a~f 这个特定的字符集内的，相比于随机的消息，非常不均匀。
 
-![1-2 oblivious transfer](OT.png)
+![1-2 oblivious transfer](ot.png)
 
 以下的数学公式都是 mod n 意义下的。
 
