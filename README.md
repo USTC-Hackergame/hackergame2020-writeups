@@ -16,7 +16,7 @@
 | [猫咪问答++（未完成）](official/猫咪问答++/README.md)                  | [文件、源代码](official/猫咪问答++/src)                 |
 | [2048（未完成）](official/2048/README.md)                              | [文件、源代码](official/2048/src)                       |
 | [一闪而过的 Flag](official/一闪而过的%20Flag/README.md)      | [文件、源代码](official/一闪而过的%20Flag/src)          |
-| [从零开始的记账工具人（未完成）](official/从零开始的记账工具人/README.md) | [文件、源代码](official/从零开始的记账工具人/src)       |
+| [从零开始的记账工具人](official/从零开始的记账工具人/README.md) | [文件、源代码](official/从零开始的记账工具人/src)       |
 | [超简单的世界模拟器](official/超简单的世界模拟器/README.md)  | [文件、源代码](official/超简单的世界模拟器/src)         |
 | [从零开始的火星文生活](official/从零开始的火星文生活/README.md) | [文件、源代码](official/从零开始的火星文生活/src)       |
 | [自复读的复读机](official/自复读的复读机/README.md)          | [文件、源代码](official/自复读的复读机/src)             |
@@ -37,12 +37,12 @@
 | [超简易的网盘服务器](official/超简易的网盘服务器/README.md)  | [文件、源代码](official/超简易的网盘服务器/src)         |
 | [超安全的代理服务器](official/超安全的代理服务器/README.md)  | [文件、源代码](official/超安全的代理服务器/src)         |
 | [证验码（未完成）](official/证验码/README.md)                          | [文件、源代码](official/证验码/src)                     |
-| [动态链接库检查器（未完成）](official/动态链接库检查器/README.md)      | [文件、源代码](official/动态链接库检查器/src)           |
-| [超精准的宇宙射线模拟器（未完成）](official/超精准的宇宙射线模拟器/README.md) | [文件、源代码](official/超精准的宇宙射线模拟器/src)     |
+| [动态链接库检查器](official/动态链接库检查器/README.md)      | [文件、源代码](official/动态链接库检查器/src)           |
+| [超精准的宇宙射线模拟器](official/超精准的宇宙射线模拟器/README.md) | [文件、源代码](official/超精准的宇宙射线模拟器/src)     |
 | [超迷你的挖矿模拟器](official/超迷你的挖矿模拟器/README.md)  | [文件、源代码](official/超迷你的挖矿模拟器/src)         |
 | [Flag 计算机](official/Flag%20计算机/README.md)              | [文件、源代码](official/Flag%20计算机/src)              |
-| [中间人（未完成）](official/中间人/README.md)                          | [文件、源代码](official/中间人/src)                     |
-| [不经意传输（未完成）](official/不经意传输/README.md)                  | [文件、源代码](official/不经意传输/src)                 |
+| [中间人](official/中间人/README.md)                          | [文件、源代码](official/中间人/src)                     |
+| [不经意传输](official/不经意传输/README.md)                  | [文件、源代码](official/不经意传输/src)                 |
 
 
 ### 来自选手

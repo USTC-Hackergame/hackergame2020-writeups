@@ -1,0 +1,7 @@
+version: "3"
+services:
+  exam:
+    restart: always
+    build: .
+    ports:
+      - "10002:80"
