@@ -146,7 +146,7 @@ this.baseSeed = (this.baseSeed << 3) | (BASE_SEED_RNG.nextInt() & 7);
 > ```plain
 > innerSeed         = ((seed ^ 0x5DEECE66D) * 0x5DEECE66D + 0xB) & 0xFFFFFFFFFFFF
 >
-> innerSeed'        = ((seed + k) ^ 0x5DEECE66D) * 0x5DEECE66D + 0xB) & 0xFFFFFFFFFFFF
+> innerSeed'        = (((seed + k) ^ 0x5DEECE66D) * 0x5DEECE66D + 0xB) & 0xFFFFFFFFFFFF
 >                   = (((seed ^ 0x5DEECE66D) + k) * 0x5DEECE66D + 0xB) & 0xFFFFFFFFFFFF
 >                   = ((seed ^ 0x5DEECE66D) * 0x5DEECE66D + 0xB + k * 0x5DEECE66D) & 0xFFFFFFFFFFFF
 >                   = innerSeed + (k * 0x5DEECE66D) & 0xFFFFFFFFFFFF
