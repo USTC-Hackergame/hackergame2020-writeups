@@ -2,7 +2,9 @@
 
 此题目是 LearnOpenGL 教程中『基本光照』一节魔改而成。如果还不清楚基本的渲染管线和 OpenGL 知识的可以参考 LearnOpenGL 教程。
 
-这个题目的出题思路其实就是“你的 flag 被其它的东西挡住了“。之前和 djh 他们讨论这个问题的时候，我提到在游戏开发里面经常会遇到绘制顺序和 Shader 错误导致的 bug，这种时候我们一般都抓帧blabla...之后，就想出一道简单的图形学题目来让大家玩一玩 OpenGL，了解一些 Realtime Rendering 的基础知识。
+这个题目的出题思路其实就是“你的 flag 被其它的东西挡住了“。之前和 djh 他们讨论这个问题的时候，我提到在游戏开发里面经常会遇到绘制顺序和 Shader 错误导致的 bug，这种时候我们一般都抓帧blabla...
+
+之后，就想出一道简单的图形学题目来让大家玩一玩 OpenGL，了解一些 Realtime Rendering 的基础知识。
 
 data.bin 里面其实就是一些顶点和索引，我把模型用 Blender 做好之后，用 assimp 进行 Triangulation 并且输出到一个自制的 binary 格式。具体可以参考 challenges 仓库里面本题源码的 util 文件夹。
 
