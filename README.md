@@ -6,7 +6,7 @@
 
 若大家对本题解有任何疑问或改进建议，欢迎 [提 issue](https://github.com/USTC-Hackergame/hackergame2020-writeups/issues/new)
 
-比赛平台：(https://hack.lug.ustc.edu.cn/)[https://hack.lug.ustc.edu.cn/]
+比赛平台：[https://hack.lug.ustc.edu.cn/](https://hack.lug.ustc.edu.cn/)
 
 ## 目录
 
