@@ -2,6 +2,10 @@
 
 此题目是 LearnOpenGL 教程中『基本光照』一节魔改而成。如果还不清楚基本的渲染管线和 OpenGL 知识的可以参考 LearnOpenGL 教程。
 
+这个题目的出题思路其实就是“你的 flag 被其它的东西挡住了“。之前和 djh 他们讨论这个问题的时候，我提到在游戏开发里面经常会遇到绘制顺序和 Shader 错误导致的 bug，这种时候我们一般都抓帧blabla...
+
+之后，就想出一道简单的图形学题目来让大家玩一玩 OpenGL，了解一些 Realtime Rendering 的基础知识。
+
 data.bin 里面其实就是一些顶点和索引，我把模型用 Blender 做好之后，用 assimp 进行 Triangulation 并且输出到一个自制的 binary 格式。具体可以参考 challenges 仓库里面本题源码的 util 文件夹。
 
 下面给出两种做法：
@@ -24,11 +28,45 @@ data.bin 里面其实就是一些顶点和索引，我把模型用 Blender 做�
 
 ## 魔改 Shader
 
-另一个简单的想法是，只要我们在片段着色器中把挡在 flag 前面的片段 discard 掉，我们就可以在屏幕上看到 flag 了。
+另一个简单的想法是，只要我们在片段着色器（Fragment Shader）中把挡在 flag 前面的片段 discard 掉，我们就可以在屏幕上看到 flag 了。
+
+> 当然，也可以有很多其它的想法，比如
+>
+> - 在 Vertex Shader 中把模型的 z 方向进行拉伸，使得挡在 flag 前面的”砖头"因为光栅化前的坐标裁剪而被裁剪掉
+> - 在 Vertex Shader 中镜像一下顶点的位置，把 flag 挪到前面去
+>
+> 等等等等...方法其实挺多的
 
 于是修改 Shader 如下：
 
-### basic_lighting.fs
+> （这里我们在 Vertex Shader 中新加入了一个输出 OrigPos）
+
+### 顶点着色器 - basic_lighting.vs
+
+```glsl
+#version 330 core
+layout (location = 0) in vec3 aPos;
+layout (location = 1) in vec3 aNormal;
+
+out vec3 FragPos;
+out vec3 Normal;
+out vec3 OrigPos;
+
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
+
+void main()
+{
+    FragPos = vec3(model * vec4(aPos, 1.0));
+    Normal = aNormal;
+    OrigPos = aPos;
+
+    gl_Position = projection * view * vec4(FragPos, 1.0);
+}
+```
+
+### 片段着色器 - basic_lighting.fs
 
 ```glsl
 #version 330 core
@@ -63,30 +101,7 @@ void main()
 } 
 ```
 
-### basic_lighting.vs
 
-```glsl
-#version 330 core
-layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec3 aNormal;
-
-out vec3 FragPos;
-out vec3 Normal;
-out vec3 OrigPos;
-
-uniform mat4 model;
-uniform mat4 view;
-uniform mat4 projection;
-
-void main()
-{
-    FragPos = vec3(model * vec4(aPos, 1.0));
-    Normal = aNormal;
-    OrigPos = aPos;
-
-    gl_Position = projection * view * vec4(FragPos, 1.0);
-}
-```
 
 ## 总结
 

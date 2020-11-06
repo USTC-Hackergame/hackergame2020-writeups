@@ -1,0 +1,13 @@
+version: "2.4"
+services:
+  simulator:
+    restart: always
+    build: simulator
+    ports:
+      - "10190:80"
+  generator:
+    restart: always
+    build: generator
+    scale: 8
+    expose:
+      - "5000"

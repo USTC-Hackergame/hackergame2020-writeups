@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="static/favicon.ico" />
+    <title>超基础的数理模拟器</title>
+
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/font-awesome.min.css">
+
+    <script>window.console = window.console || function (t) { };</script>
+    <script>if (document.location.search.match(/type=embed/gi)) { window.parent.postMessage("resize", "*"); }</script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global',
+                scale: 1.2
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" src="static/tex-svg.js">
+    </script>
+</head>
+
+<body translate="no">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> <a class="navbar-brand" href="#">超基础的数理模拟器</a>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="navbar-nav ml-md-auto">
+                            <a href="logout" class="btn btn-primary my-2 my-sm-0">
+                                溜了溜了
+                            </a>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped  progress-bar-animated bg-success" role="progressbar"
+                        style="width: {{ width }}%" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                {% if result == 'true' %}
+                <div class="alert alert-success" role="alert">
+                    答案正确! 小小年纪, 果然满脑子都是<b>数理基础</b>呢
+                </div>
+                {% endif %}
+                {% if result == 'false' %}
+                <div class="alert alert-danger" role="alert">
+                    答案错误 /(ㄒoㄒ)/~~ 又是数理基础不扎实的一天
+                </div>
+                {% endif %}
+                <div class="row" style="margin-top:5px">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4 alert alert-info text-center">
+                        <p class="lead" style="margin-bottom:5px">继续答对</p>
+                        <h1 class="cover-heading"> {{ remaining }} 题</h1>
+                        <p class="lead" style="margin-bottom:5px">即可视为通过(数理基础扎实的)图灵测试</p>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+                <center>
+                    <p> ${{ latex }}$</p>
+                </center>
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <form action="/submit" method="POST">
+                            <div class="input-group">
+                                <input type="text" placeholder="请计算以上定积分的结果 (精确到小数点后六位)" class="form-control"
+                                    name="ans">
+                                <div class="pull-right" style="margin-left:5px">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="submit">检查基础</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

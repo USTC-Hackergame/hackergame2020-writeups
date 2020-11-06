@@ -24,11 +24,11 @@
 | [233 同学的 Docker](official/233%20同学的%20Docker/README.md) | [文件、源代码](official/233%20同学的%20Docker/src)      |
 | [从零开始的 HTTP 链接](official/从零开始的%20HTTP%20链接/README.md) |    |
 | [来自一教的图片](official/来自一教的图片/README.md)          |                  |
-| [超简陋的 OpenGL 小程序](official/超简陋的%20OpenGL%20小程序/README.md) |  |
+| [超简陋的 OpenGL 小程序](official/超简陋的%20OpenGL%20小程序/README.md) | [文件、源代码](official/超简陋的%20OpenGL%20小程序/src) |
 | [生活在博弈树上](official/生活在博弈树上/README.md)          | [文件、源代码](official/生活在博弈树上/src)             |
 | [来自未来的信笺](official/来自未来的信笺/README.md)          | [文件、源代码](official/来自未来的信笺/src)             |
 | [狗狗银行](official/狗狗银行/README.md)                      | [文件、源代码](official/狗狗银行/src)                   |
-| [超基础的数理模拟器（未完成）](official/超基础的数理模拟器/README.md)  | [文件、源代码](official/超基础的数理模拟器/src)         |
+| [超基础的数理模拟器](official/超基础的数理模拟器/README.md)  | [文件、源代码](official/超基础的数理模拟器/src)         |
 | [永不溢出的计算器](official/永不溢出的计算器/README.md)      | [文件、源代码](official/永不溢出的计算器/src)           |
 | [普通的身份认证器](official/普通的身份认证器/README.md)      | [文件、源代码](official/普通的身份认证器/src)           |
 | [超精巧的数字论证器](official/超精巧的数字论证器/README.md)  | [文件、源代码](official/超精巧的数字论证器/src)         |
