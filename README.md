@@ -6,14 +6,16 @@
 
 若大家对本题解有任何疑问或改进建议，欢迎 [提 issue](https://github.com/USTC-Hackergame/hackergame2020-writeups/issues/new)
 
+比赛平台：(https://hack.lug.ustc.edu.cn/)[https://hack.lug.ustc.edu.cn/]
+
 ## 目录
 
 ### 官方题解
 
 | 题目 write-up                                                | 文件、源代码                                            |
 | ------------------------------------------------------------ | ------------------------------------------------------- |
-| [签到（未完成）](official/签到/README.md)                              | [文件、源代码](official/签到/src)                       |
-| [猫咪问答++（未完成）](official/猫咪问答++/README.md)                  | [文件、源代码](official/猫咪问答++/src)                 |
+| [签到](official/签到/README.md)                              | [文件、源代码](official/签到/src)（未完成）                       |
+| [猫咪问答++](official/猫咪问答++/README.md)                  | [文件、源代码](official/猫咪问答++/src)（未完成）                 |
 | [2048（未完成）](official/2048/README.md)                              | [文件、源代码](official/2048/src)                       |
 | [一闪而过的 Flag](official/一闪而过的%20Flag/README.md)      | [文件、源代码](official/一闪而过的%20Flag/src)          |
 | [从零开始的记账工具人](official/从零开始的记账工具人/README.md) | [文件、源代码](official/从零开始的记账工具人/src)       |
@@ -49,15 +51,13 @@
 
 | write-up | 备注 | 包含题目 |
 | - | - | - |
-| mcfx [Markdown](players/mcfx/writeup.md) [PDF](players/mcfx/writeup.pdf) | | 全部题目 |
-| [example](players/example) | | 题目 1、题目 2 |
+| mcfx [Markdown](players/mcfx/writeup.md) [PDF](players/mcfx/writeup.pdf) | 总排名第一名 | 全部题目 |
 
 ## 其他资源
 
 - [中国科学技术大学第六届信息安全大赛（Hackergame 2019）题解](https://github.com/ustclug/hackergame2019-writeups)
 - [中国科学技术大学第五届信息安全大赛（Hackergame 2018）题解](https://github.com/ustclug/hackergame2018-writeups)
 - [中国科学技术大学第四届信息安全大赛（Hackergame 2017）题解](https://volltin.gitbooks.io/hackergame2017-writeup/)
-
 - [知乎：参加中国科学技术大学第七届信息安全大赛（Hackergame 2020）是怎样一种体验？](https://www.zhihu.com/question/428140079)
 - [知乎：参加中国科学技术大学第六届信息安全大赛（Hackergame 2019）是怎样一种体验？](https://www.zhihu.com/question/351947330)
 - [知乎：参加中国科学技术大学第五届信息安全大赛（Hackergame 2018）是怎样一种体验？](https://www.zhihu.com/question/297850153)
