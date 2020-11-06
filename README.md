@@ -28,7 +28,7 @@
 | [生活在博弈树上](official/生活在博弈树上/README.md)          | [文件、源代码](official/生活在博弈树上/src)              |
 | [来自未来的信笺](official/来自未来的信笺/README.md)          | [文件、源代码](official/来自未来的信笺/src)              |
 | [狗狗银行](official/狗狗银行/README.md)                      | [文件、源代码](official/狗狗银行/src)                    |
-| [超基础的数理模拟器（未完成）](official/超基础的数理模拟器/README.md) | [文件、源代码](official/超基础的数理模拟器/src)          |
+| [超基础的数理模拟器](official/超基础的数理模拟器/README.md) | [文件、源代码](official/超基础的数理模拟器/src)          |
 | [永不溢出的计算器](official/永不溢出的计算器/README.md)      | [文件、源代码](official/永不溢出的计算器/src)            |
 | [普通的身份认证器](official/普通的身份认证器/README.md)      | [文件、源代码](official/普通的身份认证器/src)            |
 | [超精巧的数字论证器](official/超精巧的数字论证器/README.md)  | [文件、源代码](official/超精巧的数字论证器/src)          |
