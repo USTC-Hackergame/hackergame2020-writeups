@@ -1,0 +1,47 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount,
+.amount-raw {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.85);
+}
+.amount {
+  display: inline-block;
+  position: relative;
+  margin-right: 26px;
+}
+.amount img {
+  position: absolute;
+  top: 2px;
+  right: -26px;
+  height: 22px;
+  width: 22px;
+  margin-left: 4px;
+}
+
+.account-debit {
+  background: linear-gradient(315deg, #56a5ff, #94c6ff);
+}
+.account-credit {
+  background: linear-gradient(315deg, #ff7088, #ff92a4);
+}
+.new-account {
+  text-align: center;
+  background: linear-gradient(315deg, #dbdbdb, #ebebeb);
+}
+
+.sider {
+  overflow-x: hidden;
+}
+.sider .ant-layout-sider-children > * {
+  margin: 12px;
+}

@@ -1,0 +1,42 @@
+name: api
+
+source-dirs: src
+
+executables:
+  api:
+    main: api.hs
+
+ghc-options:
+- -Wall
+- -Werror
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wpartial-fields
+- -Wredundant-constraints
+- -fhide-source-paths
+- -freverse-errors
+- -O2
+
+default-extensions:
+- BangPatterns
+- DerivingStrategies
+- GeneralizedNewtypeDeriving
+- LambdaCase
+- MultiWayIf
+- NoImplicitPrelude
+- OverloadedStrings
+- ScopedTypeVariables
+
+dependencies:
+- aeson
+- base
+- monad-logger
+- persistent
+- persistent-sqlite
+- rio
+- wai-cors
+- warp
+- yesod
