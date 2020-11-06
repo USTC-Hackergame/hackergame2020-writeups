@@ -39,7 +39,7 @@
 | [证验码（未完成）](official/证验码/README.md)                          | [文件、源代码](official/证验码/src)                     |
 | [动态链接库检查器（未完成）](official/动态链接库检查器/README.md)      | [文件、源代码](official/动态链接库检查器/src)           |
 | [超精准的宇宙射线模拟器（未完成）](official/超精准的宇宙射线模拟器/README.md) | [文件、源代码](official/超精准的宇宙射线模拟器/src)     |
-| [超迷你的挖矿模拟器（未完成）](official/超迷你的挖矿模拟器/README.md)  | [文件、源代码](official/超迷你的挖矿模拟器/src)         |
+| [超迷你的挖矿模拟器](official/超迷你的挖矿模拟器/README.md)  | [文件、源代码](official/超迷你的挖矿模拟器/src)         |
 | [Flag 计算机](official/Flag%20计算机/README.md)              | [文件、源代码](official/Flag%20计算机/src)              |
 | [中间人（未完成）](official/中间人/README.md)                          | [文件、源代码](official/中间人/src)                     |
 | [不经意传输（未完成）](official/不经意传输/README.md)                  | [文件、源代码](official/不经意传输/src)                 |
