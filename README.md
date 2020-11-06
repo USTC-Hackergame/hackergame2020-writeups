@@ -31,7 +31,7 @@
 | [超基础的数理模拟器（未完成）](official/超基础的数理模拟器/README.md)  | [文件、源代码](official/超基础的数理模拟器/src)         |
 | [永不溢出的计算器](official/永不溢出的计算器/README.md)      | [文件、源代码](official/永不溢出的计算器/src)           |
 | [普通的身份认证器](official/普通的身份认证器/README.md)      | [文件、源代码](official/普通的身份认证器/src)           |
-| [超精巧的数字论证器（未完成）](official/超精巧的数字论证器/README.md)  | [文件、源代码](official/超精巧的数字论证器/src)         |
+| [超精巧的数字论证器](official/超精巧的数字论证器/README.md)  | [文件、源代码](official/超精巧的数字论证器/src)         |
 | [超自动的开箱模拟器](official/超自动的开箱模拟器/README.md)  | [文件、源代码](official/超自动的开箱模拟器/src)         |
 | [室友的加密硬盘](official/室友的加密硬盘/README.md)          |                  |
 | [超简易的网盘服务器](official/超简易的网盘服务器/README.md)  | [文件、源代码](official/超简易的网盘服务器/src)         |
