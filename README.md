@@ -49,6 +49,7 @@
 
 | write-up | 备注 | 包含题目 |
 | - | - | - |
+| mcfx [Markdown](players/mcfx/writeup.md) [PDF](players/mcfx/writeup.pdf) | | 全部题目 |
 | [example](players/example) | | 题目 1、题目 2 |
 
 ## 其他资源
