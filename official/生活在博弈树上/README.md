@@ -178,3 +178,7 @@ io.recvuntil("): ")
 io.sendline(payload)
 io.interactive()
 ```
+
+## 附录
+
+题目文案使用 <https://github.com/BeautyYuYanli/full-mark-composition-generator> 生成。
