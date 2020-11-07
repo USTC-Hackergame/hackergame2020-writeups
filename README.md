@@ -53,7 +53,9 @@
 | - | - | - |
 | mcfx [Markdown](players/mcfx/writeup.md) [PDF](players/mcfx/writeup.pdf) | 总排名第一名 | 全部题目 |
 | [ProfFan](players/ProfFan/writeup.md) |  | 证验码 |
-| [A-wing](players/a-wing/writeup.md) | 补充一下官方题解 | 一闪而过的 Flag, 233 同学的字符串工具, 233 同学的 Docker |
+| [NaiveTomcat](players/NaiveTomcat/) |  | 超简陋的 OpenGL 小程序, 狗狗银行, 233 同学的字符串工具, 233 同学的 Docker |
+| [sparkcyf](players/sparkcyf/writeup.md) |  | 从零开始的记账工具人 |
+| [A-wing](players/a-wing/writeup.md) |  | 一闪而过的 Flag, 233 同学的字符串工具, 233 同学的 Docker |
 
 ## 其他资源
 
