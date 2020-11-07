@@ -6,7 +6,7 @@
 # STEP 1: run `wget https://github.com/adobe-fonts/source-code-pro/raw/release/TTF/SourceCodePro-Light.ttf`
 # STEP 2: download attachment `shuffle.py`
 # STEP 3: fill in your `TOKEN`
-# STEP 4: run `python3 captcha_payload.py`
+# STEP 4: run `python3 payload.py`
 
 BASE = "http://202.38.93.111:10150/"
 TOKEN = "123:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
