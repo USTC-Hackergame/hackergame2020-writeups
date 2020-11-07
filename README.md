@@ -52,6 +52,7 @@
 | write-up | 备注 | 包含题目 |
 | - | - | - |
 | mcfx [Markdown](players/mcfx/writeup.md) [PDF](players/mcfx/writeup.pdf) | 总排名第一名 | 全部题目 |
+| [ProfFan](players/ProfFan/writeup.md) |  | 证验码 |
 
 ## 其他资源
 
