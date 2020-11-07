@@ -31,8 +31,6 @@
 
 `/bin/sh -c rm /code/flag.txt`  
 
-`easy_gamE_but_can_u_get_my_shel1`  建议去玩前年的”猫咪克星“
-
 `DUTCTF{We1c0met0DUTCTF}`           广告费？
 
 `flag{We1c0met0DUTCTF}`
