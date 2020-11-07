@@ -16,7 +16,7 @@
 | ------------------------------------------------------------ | ------------------------------------------------------- |
 | [签到](official/签到/README.md)                              | 无                       |
 | [猫咪问答++](official/猫咪问答++/README.md)                  | 无                 |
-| [2048（未完成）](official/2048/README.md)                              | [文件、源代码](official/2048/src)                       |
+| [2048](official/2048/README.md)                              | [文件、源代码](official/2048/src)                       |
 | [一闪而过的 Flag](official/一闪而过的%20Flag/README.md)      | [文件、源代码](official/一闪而过的%20Flag/src)          |
 | [从零开始的记账工具人](official/从零开始的记账工具人/README.md) | [文件、源代码](official/从零开始的记账工具人/src)       |
 | [超简单的世界模拟器](official/超简单的世界模拟器/README.md)  | [文件、源代码](official/超简单的世界模拟器/src)         |
