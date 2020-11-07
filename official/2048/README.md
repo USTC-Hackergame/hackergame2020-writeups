@@ -38,6 +38,8 @@ var url;
 
 > 还没有大成功，不能给你 flxg。
 
-这正是游戏失败时的提示信息，如果访问 `/getflxg?my_favorite_fruit=banana`，则可以得到正确的 flag。
+这正是游戏失败时的提示信息。
+
+我们打开 Chrome 浏览器的开发者工具，切换到 Console 标签页，执行一下 `('b'+'a'+ +'a'+'a').toLowerCase()`，得到正确的应该填入的值为 `banana`，访问 `/getflxg?my_favorite_fruit=banana`，则可以得到正确的 flag。
 
 有的同学可能会好奇为什么 `('b'+'a'+ +'a'+'a').toLowerCase()` 的计算结果是 `banana`，这个问题可以参考：https://stackoverflow.com/questions/57456188/why-is-the-result-of-ba-a-a-tolowercase-banana 。
