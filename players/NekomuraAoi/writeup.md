@@ -63,7 +63,9 @@ ida 一看主函数逻辑比较复杂，Shader 脚本看不懂。果断 x64dbg �
 
 网络搜索 glDrawElements 发现，如果我们能减小 count 的值，估计就可以显示出（肉眼可以分辨的）flag
 
-由于 rdx 是第二个参数，也就是 count ，正好看到 rdx 在 call 之前要左移两位，我们可以在这条指令的基础之上，修改为 sar rdx,3 ，这样 count 就变为了原来的一半。
+rdx 是第二个参数，也就是 count
+
+正好看到 rdx 在 call 之前要左移两位，我们可以把这条指令修改为 sar rdx,3 这样 count 会再左移一位，就变成了原来的一半。
 
 ![pic](2.png)
 
@@ -86,7 +88,7 @@ ida 一看主函数逻辑比较复杂，Shader 脚本看不懂。果断 x64dbg �
 import os
 
 kaika = open("kaika.txt", "r").read()
-zuanzhuang = open("zuanzhang.txt", "r").rea d()
+zuanzhang = open("zuanzhang.txt", "r").read()
 
 n_xyk = 50
 first_xyk = 2
@@ -102,7 +104,7 @@ now_jjk = first_jjk
 
 for now_xyk in range(first_xyk, first_xyk + n_xyk):
     for i in range(11): # 每张信用卡转不超过2000，所以最多转167*11
-        os.system(zuanzhuang % (str(now_xyk),str(now_jjk))) #产生利息的最低金额167
+        os.system(zuanzhang % (str(now_xyk),str(now_jjk))) #产生利息的最低金额167
         now_jjk += 1
 ```
 Smart 到连 http request 都不写了，直接 system curl，通俗易懂
@@ -112,7 +114,7 @@ Smart 到连 http request 都不写了，直接 system curl，通俗易懂
 然后就坐收利息了（
 
 ## 自复读的复读机
-只有我不知道这叫 Quine 了
+~~只有我不知道这叫 Quine 了~~
 
 搜索了半天，整了个 sys getframe f_code.co_consts （草） 
 
@@ -124,7 +126,7 @@ exec('''print(     __import__('hashlib').sha256(("exec(" + "'"*3 + __import__('s
 ```
 
 ##  生活在博弈树上
-只有我不知道 ROPgadget 可以自动生成 RopChain，又丢人了。
+~~只有我不知道 ROPgadget 可以自动生成 RopChain，又丢人了。~~
 
 推荐使用 gdb+pwndbg  调试，方便。
 
@@ -176,7 +178,7 @@ c.interactive()
 ## 超精准的宇宙射线模拟器
 打开 ida 分析，首先发现这玩意只能反转一个 bit ，那不行，必须多次反转才能写入 shellcode，所以要检查反转哪个 bit 可以使程序重复执行。
 
-经过一波尝试，我写了一个简单的计算器。发现 0x401296 这个地方，反转第四个 bit 一次就可以跳转回 _start 使程序无限运行，再反转第六个 bit 就可以跳转到一个此过程中不会被执行的代码段地址，我们可以在这里写入 shellcode
+经过一波尝试，我写了一个简单的计算器。发现 0x401296 这个地方，反转第四个 bit 就可以跳转回 _start 使程序无限运行，再反转第六个 bit 就可以跳转到一个此过程中不会被执行的代码段地址，我们可以在这里写入 shellcode
 
 ```
 from pwn import *
@@ -363,7 +365,8 @@ c.interactive()
 贴入远端就可以 getshell 然后拿到 flag
 
 ## 总结
-成绩换算100分制果然没有60分，要重修了呜呜呜。
+
+~~成绩换算100分制果然没有60分，要重修了呜呜呜。~~
 
 ![pic](0.png)
 
