@@ -16,7 +16,7 @@
 | ------------------------------------------------------------ | ------------------------------------------------------- |
 | [签到](official/签到/README.md)                              | 无                       |
 | [猫咪问答++](official/猫咪问答++/README.md)                  | 无                 |
-| [2048](official/2048/README.md)                              | [文件、源代码](official/2048/src)                       |
+| [2048](official/2048/README.md)                              | 暂无                       |
 | [一闪而过的 Flag](official/一闪而过的%20Flag/README.md)      | [文件、源代码](official/一闪而过的%20Flag/src)          |
 | [从零开始的记账工具人](official/从零开始的记账工具人/README.md) | [文件、源代码](official/从零开始的记账工具人/src)       |
 | [超简单的世界模拟器](official/超简单的世界模拟器/README.md)  | [文件、源代码](official/超简单的世界模拟器/src)         |
@@ -24,8 +24,8 @@
 | [自复读的复读机](official/自复读的复读机/README.md)          | [文件、源代码](official/自复读的复读机/src)             |
 | [233 同学的字符串工具](official/233%20同学的字符串工具/README.md) | [文件、源代码](official/233%20同学的字符串工具/src)     |
 | [233 同学的 Docker](official/233%20同学的%20Docker/README.md) | [文件、源代码](official/233%20同学的%20Docker/src)      |
-| [从零开始的 HTTP 链接](official/从零开始的%20HTTP%20链接/README.md) |    |
-| [来自一教的图片](official/来自一教的图片/README.md)          |                  |
+| [从零开始的 HTTP 链接](official/从零开始的%20HTTP%20链接/README.md) |  无  |
+| [来自一教的图片](official/来自一教的图片/README.md)          | 无                 |
 | [超简陋的 OpenGL 小程序](official/超简陋的%20OpenGL%20小程序/README.md) | [文件、源代码](official/超简陋的%20OpenGL%20小程序/src) |
 | [生活在博弈树上](official/生活在博弈树上/README.md)          | [文件、源代码](official/生活在博弈树上/src)             |
 | [来自未来的信笺](official/来自未来的信笺/README.md)          | [文件、源代码](official/来自未来的信笺/src)             |
@@ -35,10 +35,10 @@
 | [普通的身份认证器](official/普通的身份认证器/README.md)      | [文件、源代码](official/普通的身份认证器/src)           |
 | [超精巧的数字论证器](official/超精巧的数字论证器/README.md)  | [文件、源代码](official/超精巧的数字论证器/src)         |
 | [超自动的开箱模拟器](official/超自动的开箱模拟器/README.md)  | [文件、源代码](official/超自动的开箱模拟器/src)         |
-| [室友的加密硬盘](official/室友的加密硬盘/README.md)          |                  |
+| [室友的加密硬盘](official/室友的加密硬盘/README.md)          | 无                 |
 | [超简易的网盘服务器](official/超简易的网盘服务器/README.md)  | [文件、源代码](official/超简易的网盘服务器/src)         |
 | [超安全的代理服务器](official/超安全的代理服务器/README.md)  | [文件、源代码](official/超安全的代理服务器/src)         |
-| [证验码](official/证验码/README.md)                          | [文件、源代码](official/证验码/src)                     |
+| [证验码](official/证验码/README.md)                          | 暂无                     |
 | [动态链接库检查器](official/动态链接库检查器/README.md)      | [文件、源代码](official/动态链接库检查器/src)           |
 | [超精准的宇宙射线模拟器](official/超精准的宇宙射线模拟器/README.md) | [文件、源代码](official/超精准的宇宙射线模拟器/src)     |
 | [超迷你的挖矿模拟器](official/超迷你的挖矿模拟器/README.md)  | [文件、源代码](official/超迷你的挖矿模拟器/src)         |
