@@ -17,15 +17,21 @@ Docker，Golang，Python，Plan 9，PHP，GNU，LLVM，Swift，Perl，GitHub，T
 
 搜索关键词「第一个以信鸽为载体的 IP 网络标准的 RFC 文档」，找到维基百科或其他网页，得到对应的 RFC 文档编号，查找得到原文：https://tools.ietf.org/html/rfc1149 ，在其中搜索「MTU」得到答案：256。
 
+![rfc1149](images/rfc1149.png)
+
 > 3. USTC Linux 用户协会在 2019 年 9 月 21 日自由软件日活动中介绍的开源游戏的名称共有几个字母？
 提示：活动记录会在哪里？
 
 搜索 USTC Linux 用户协会，找到该组织的首页 lug.ustc.edu.cn，然后找到 Wiki 中的自由软件日的活动记录：https://lug.ustc.edu.cn/wiki/lug/events/sfd/ ，得到演讲主题：《开源游戏 Teeworlds》，共有 9 个字母。
 
+![sfd2019](images/sfd2019.png)
+
 > 4. 中国科学技术大学西校区图书馆正前方（西南方向） 50 米 L 型灌木处共有几个连通的划线停车位？
 提示：建议身临其境。
 
 尝试使用百度地图、高德地图、谷歌地图的卫星地图，发现过于模糊无法计数，但是百度地图额外提供了全景地图（街景地图），在西区图书馆门口查看即可，共 9 个。
+
+![bd](images/bd.png)
 
 > 5. 中国科学技术大学第六届信息安全大赛所有人合计提交了多少次 flag？
 提示：是一个非负整数。
