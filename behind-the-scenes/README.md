@@ -29,7 +29,7 @@
 
 `1' or '1'='1`  不会真的有人以为能注入比赛平台吧
 
-`/bin/sh -c rm /code/flag.txt`  
+`/bin/sh -c rm /code/flag.txt`
 
 `DUTCTF{We1c0met0DUTCTF}`           广告费？
 
@@ -79,7 +79,7 @@ Have fun 系列:
 
 `flag{Never_leak_your_sEcReT_KEY}`
 
-`flag{NoMorePythonAnyMoreeeeeeeeee}`    
+`flag{NoMorePythonAnyMoreeeeeeeeee}`
 
 `flag{The Answer to Life，the Universe and Everything is 42.}`  道理是没错
 
@@ -104,6 +104,10 @@ Have fun 系列:
 `console.log('没想到吧!');` 没想到，没想到.webp
 
 `falg{这里曾经有个flag}`    falg！
+
+> 这位同学等下 你该不会是相信了群里的这张图吧？
+>
+> ![from @Lakr233](./files/狗狗银行BRoll.jpg)
 
 `flag{flag 来了，可是我什么也看不见！}`
 
