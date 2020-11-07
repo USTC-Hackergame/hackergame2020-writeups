@@ -39,7 +39,7 @@ def solve(img):
     # pix sum vector, shape: (255, )
     b = count_pix(img)
     
-    # Solve A^T.x = b using least-squares mathod
+    # Solve A^T.x = b using least-squares method
     xf, *_ = np.linalg.lstsq(A.T, b, rcond=None)
     
     # number matrix, shape: (62, )
