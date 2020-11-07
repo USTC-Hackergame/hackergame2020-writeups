@@ -56,6 +56,7 @@
 | [NaiveTomcat](players/NaiveTomcat/) |  | 超简陋的 OpenGL 小程序, 狗狗银行, 233 同学的字符串工具, 233 同学的 Docker |
 | [sparkcyf](players/sparkcyf/writeup.md) |  | 从零开始的记账工具人 |
 | [A-wing](players/a-wing/writeup.md) |  | 一闪而过的 Flag, 233 同学的字符串工具, 233 同学的 Docker |
+| [hsfzxjy](players/hsfzxjy) |  | 超基础的数理模拟器, 从零开始的 HTTP 链接, 永不溢出的计算器 |
 
 ## 其他资源
 
