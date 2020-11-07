@@ -55,7 +55,7 @@
 
 ## 其他资源
 
-[花絮](./behind-the-scenes/README.md)
+[搞笑 Flag & 花絮](./behind-the-scenes/README.md)
 
 - [中国科学技术大学第六届信息安全大赛（Hackergame 2019）题解](https://github.com/ustclug/hackergame2019-writeups)
 - [中国科学技术大学第五届信息安全大赛（Hackergame 2018）题解](https://github.com/ustclug/hackergame2018-writeups)

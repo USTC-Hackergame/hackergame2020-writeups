@@ -1,8 +1,121 @@
 # 这里是花絮！
 
+[搞笑flag](#千奇百怪的-flag)
+
+[其他花絮](#各种花絮图)
+
 ## 千奇百怪的 Flag
 
-TBC
+以下为部分错误提交的 Flag：
+
+114514 合集：
+
+`-~-~-~-~(((-~-~-~-~-~-~-~-~-~1)*(-~-~-~-~-~-~1)*(-~-~-~4)*(-~-~-~-~-~-~-~-~-~5)+(-~1))*(-~-~-~-~-~-~-~4))`
+
+`++>+++[.<.>]`
+
+`1.14514`
+
+`flag{1145.14}`
+
+`flag{11451.4}`
+
+`flag{114514}`
+
+`flag{1145141919810}`
+
+`flag{这么臭的flag有交的必要吗 但是homo做题要有仪式感}`
+
+
+`1' or '1'='1`  不会真的有人以为能注入比赛平台吧
+
+`/bin/sh -c rm /code/flag.txt`  
+
+`easy_gamE_but_can_u_get_my_shel1`  建议去玩前年的”猫咪克星“
+
+`DUTCTF{We1c0met0DUTCTF}`           广告费？
+
+`flag{We1c0met0DUTCTF}`
+
+Have fun 系列:
+
+`flag{1 have fun}`
+
+`flag{2O48_1s_fun}`
+
+`flag{d0G_baNk_1s_FUN}`
+
+`flag{HacKerGame_1s_the_be4t_CTF_1n_the_w0r1d}` 好耶
+
+`flag{Hackergame2018_Have_Fun!}`   穿越啦
+
+`flag{Hackergame2020_Have_Fun!}` 0w0
+
+`flag{meow_throw_flag_to_me}`   哪有猫我也要
+
+`flag{4rch!v3_pr0gram}`
+
+`flag{HELL0_from_Arct1c!}`  Hi~
+
+`flag{Apache Tomcat}`
+
+`flag{banana}`  是喜欢香蕉没错
+
+`flxg{apple]`   不是苹果啦
+
+`flag{BaoPo}`   想干嘛？
+
+`flag{Congratulations!}`    谢谢
+
+`flag{get_flag_system}`     出门右转 HEICORE
+
+`"flag{Good, not Evil}"`
+
+`flag{how dare you}`    Oops
+
+`"flag{I am confused, madam}"`
+
+`flag{i_l0ve_Japanese_wife}`
+
+`flag{little_teapot}`   Let's brew coffee~
+
+`flag{Never_leak_your_sEcReT_KEY}`
+
+`flag{NoMorePythonAnyMoreeeeeeeeee}`    
+
+`flag{The Answer to Life，the Universe and Everything is 42.}`  道理是没错
+
+`flxg{im_so_rubb1sh}`   知道了知道了
+
+`flag{G00G1E-is-always-your-friend}`    不会真有人以为前年 flag 能复用吧？
+
+`flag{BA1DU-is-always-YOUR-FRIEND}` 那你真的做不出来了
+
+`flag{Cat-is-always-YOUR-FRIEND}`   Yeap！
+
+`flag{first_0pengl_pr0gram}` 猜 flag 水平有待提高啊
+
+`flag{first_opengl_hackergame}`
+
+`flag{First_Opengl_Program}`
+
+`flagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflagflag` 这就是复读机吗？
+
+`flag{???????????? ?????????????????????????????? ?????????????????????????g??????? ??????????????????????????? ???????????? ???????????? ??????????????????????????????????????????????????????????????}` 我也满脸 ？？？ 啊
+
+`console.log('没想到吧!');` 没想到，没想到.webp
+
+`falg{这里曾经有个flag}`    falg！
+
+`flag{flag 来了，可是我什么也看不见！}`
+
+`flag{FLXG 大成功!}`
+
+`flag{一周工作 72 小时的美工上周住进了 ICU，界面难看也先凑合着用吧}`
+
+`flag{永不放弃！}`  永不放弃！
+
+`「我很可爱，请给我 flag」` 不给:D
 
 ## 各种花絮图
 
