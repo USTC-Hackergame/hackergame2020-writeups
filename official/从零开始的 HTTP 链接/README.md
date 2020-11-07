@@ -6,7 +6,7 @@
 
 ## 简单的解法
 
-在 Linux 下，安装 socat，然后运行 `socat TCP-LISTEN:20000,fork,reuseaddr TCP:202.38.93.111:0`，再从浏览器访问 localhost:20000 即可。
+在 Linux 下，安装 socat，然后运行 `socat TCP-LISTEN:20000,fork,reuseaddr TCP:202.38.93.111:0`，再从浏览器访问 localhost:20000 即可。（注：这里的 20000 也可以换成其他端口号，与下文「花絮」中提到的 20000 没有关系）
 
 要注意，如果你在用 Linux 虚拟机，很多虚拟机软件的 NAT 实现不能正确处理 0 号端口，你需要把虚拟机的网络设置从 NAT 模式改为桥接模式。
 
