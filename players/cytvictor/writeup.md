@@ -29,7 +29,7 @@ flag.txt0000755000000000000000000000003013744647043007622 0ustar00..flag{super_s
 
 继续跟进 private/core/class-api.php:L37 的 `$ok = $archive->output($type, $base_href, $hrefs);`，我们把重点放在 private/ext/class-archive.php:L19 开始的 output 函数逻辑上。
 
-![image-20201107152527040](/Users/victor/Library/Application Support/typora-user-images/image-20201107152527040.png)
+![image-1](images/image-1.png)
 
 
 
@@ -43,7 +43,7 @@ flag.txt0000755000000000000000000000003013744647043007622 0ustar00..flag{super_s
 
 现在回到 `$this->add_hrefs($hrefs);` ，跟进 add_hrefs 跳转到 class-archive.php:L137-L158。
 
-![image-20201107155036826](/Users/victor/Library/Application Support/typora-user-images/image-20201107155036826.png)
+![image-2](images/image-2.png)
 
 
 
