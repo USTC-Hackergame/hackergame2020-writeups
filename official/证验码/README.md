@@ -33,7 +33,7 @@ pix(captcha) = sum(pix(c) for c in captcha) = sum(n(captcha, x) * pix(x) for x i
 
 Ax = b,
 
-啊这。这不是线性方程吗，解就完事儿了。
+啊这。这不是线性方程吗，还是个超定线性方程组，解就完事儿了。
 
 ## 噪音的处理
 
@@ -47,7 +47,7 @@ Ax = b_true - noise,
 
 由于噪音未知（是随机生成的）但是很小，对上式变形，用优化方法最小化噪音，求解 x* = argmin_x(noise^2) = argmin_x((Ax - b_true)^2) 即可。
 
-有很多方法可以求解此式，下面给出一种参考方法。
+有很多方法可以求解此式，下面给出一种使用最小二乘的参考方法。
 
 ```python
 # char-pix matrix, shape: (62, 255)
