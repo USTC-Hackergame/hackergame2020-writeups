@@ -61,6 +61,7 @@
 | [深度烧烤](https://www.nottres.com/nonetype/ustc-hackergame-2020-writeup.html) |  | 签到，猫咪问答++，2048，一闪而过的 Flag，从零开始的记账工具人，超简单的世界模拟器，从零开始的火星文生活，自我复读的复读机，233 的字符串工具，233 同学的 Docker，从零开始的 HTTP 链接，来自一教的图片，超简陋的 OpenGL 小程序，生活在博弈树上，来自未来的信笺，狗狗银行，超基础的数理模拟器，永不溢出的计算器，普通的身份认证器，超精巧的数字论证器，超简易的网盘服务器，超安全的代理服务器-1，超精准的宇宙射线模拟器，Flag 计算机 |
 | [gousaiyang](players/gousaiyang/writeup.md) |  | 超简单的世界模拟器, 自复读的复读机, 233 同学的 Docker, 从零开始的 HTTP 链接, 超简陋的 OpenGL 小程序, 来自未来的信笺, 超安全的代理服务器, 超精准的宇宙射线模拟器 |
 | [imlonghao](https://imlonghao.com/58.html) |  | 签到, 猫咪问答++, 2048, 一闪而过的 Flag, 从零开始的记账工具人, 超简单的世界模拟器, 自复读的复读机, 233 同学的字符串工具, 233 同学的 Docker, 从零开始的 HTTP 链接, 超简陋的 OpenGL 小程序, 生活在博弈树上, 狗狗银行, 超基础的数理模拟器, 超安全的代理服务器, 不经意传输-1 |
+| [cytvictor](players/cytvictor/writeup.md) | | 超简易的网盘服务器 |
 
 ## 其他资源
 
