@@ -28,6 +28,6 @@ Security
 
 在网上搜索「ldd exploit」之类的关键词可以查到 CVE-2019-1010023，在[这个链接](https://sourceware.org/bugzilla/show_bug.cgi?id=22851)中，我们可以看到 ldd 任意命令执行的示例代码，然而这个问题并没有被修复。
 
-所以我们把示例代码保存成文件，把 `shellcode.asm` 最后的 `cat /etc/passwd` 改成读取 flag 的命令 `cat /flag`，然后在 Linux 环境下使用 `make` 命令编译，得到的 `libevil.so` 就可以上传到题目的网页获得 flag 了。
+所以我们把示例代码保存成文件，把 `shellcode.asm` 最后的 `cat /etc/passwd` 改成读取 flag 的命令 `cat /flag`，然后在 Linux 环境下使用 `make evil` 命令编译，得到的 `libevil.so` 就可以上传到题目的网页获得 flag 了。
 
 [解题代码](src/solution)
