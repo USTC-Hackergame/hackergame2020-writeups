@@ -14,8 +14,8 @@
 
 | 题目 write-up                                                | 文件、源代码                                            |
 | ------------------------------------------------------------ | ------------------------------------------------------- |
-| [签到](official/签到/README.md)                              | [文件、源代码](official/签到/src)（未完成）                       |
-| [猫咪问答++](official/猫咪问答++/README.md)                  | [文件、源代码](official/猫咪问答++/src)（未完成）                 |
+| [签到](official/签到/README.md)                              | 无                       |
+| [猫咪问答++](official/猫咪问答++/README.md)                  | 无                 |
 | [2048（未完成）](official/2048/README.md)                              | [文件、源代码](official/2048/src)                       |
 | [一闪而过的 Flag](official/一闪而过的%20Flag/README.md)      | [文件、源代码](official/一闪而过的%20Flag/src)          |
 | [从零开始的记账工具人](official/从零开始的记账工具人/README.md) | [文件、源代码](official/从零开始的记账工具人/src)       |
