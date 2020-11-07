@@ -26,7 +26,7 @@
 
 因此可以联想到`百度街景`这个服务，搜索[目标位置](https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%E5%9B%BE%E4%B9%A6%E9%A6%86/@13053883.94,3720309.74,19z#panoid=09010500121705221534309496D&panotype=street&heading=339.15&pitch=-5.97&l=19&tn=B_NORMAL_MAP&sc=0&newmap=1&shareurl=1&pid=09010500121705221534309496D&psp=%7B%22PanoModule%22%3A%7B%22markerUid%22%3A%22b73e97ed574afa81afee7a4e%22%7D%7D)然后数一下，一共 9 个停车位。
 
-5. 中国科学技术大学第六届信息安全大赛所有人合计提交了多少次 flag？
+> 5. 中国科学技术大学第六届信息安全大赛所有人合计提交了多少次 flag？
 
 这题的答案在比赛开始前的宣传文章里有
 
@@ -139,7 +139,7 @@ data.map(([n, cnt]) => parse(n) * cnt).reduce((acc, cur) => acc + cur, 0)
 
 ## 超简单的世界模拟器
 
-这题故意没给 nc 入口而且执行时会展示过程很明显希望我们在本地模拟，所以花时间写一个脚本模拟，想偷懒也可以借助现成的库。然后 fuzz 输入区域就行了，两小题的解都是秒出。
+这题故意没给 nc 入口而且执行时会展示过程，很明显希望我们在本地模拟。所以花时间写一个脚本模拟，想偷懒也可以借助现成的库。然后 fuzz 输入区域就行了，两小题的解都是秒出。
 
 <details>
 
@@ -340,7 +340,7 @@ socket.send(payload.join('\n') + '\n')
 
 提示是 `GBK` ,试了各种组合。。。文件开头的回车居然是误导用的。
 
-[![decode](./images/decode.png)](<https://gchq.github.io/CyberChef/#recipe=Encode_text('Simplified%20Chinese%20GBK%20(936)')Encode_text('ISO-8859-1%20Latin%201%20Western%20European%20(28591)')Decode_text('Simplified%20Chinese%20GBK%20(936)')&input=CuiEpuiEqum5v%2BalvOiEneiEneiEleiEoyDmi6LohKDmi6LosKnmi6LojKvmi6Lmr5vmi6LmsJPmi6Losozmi6Lojr3mi6LosKnmi6Lpk4bmi6LmsJMg56KM6ISb6Lev6ZWB6ISm5bi96ISd5qKF5oui5Y2i6ISl56KM56KM6ZmG6ISV6ISj6ISj55yJ6ISZ6ISf56KM6ISbIOaLouW/meaLouefm%2BaLouiwqeaLouiOveaLouWNouiEp%2BiEsOiEreiEt%2BiEpuiEquaOs%2BiEqSDmi6Llv5nmi6Lnn5vmi6LosKnmi6Lojr0g6Lev5Z6E6LWC6YW26ISb6Iyr5oui5r2eCuaLouW/meaLouefm%2BaLouiwqeaLouiOveaLouayoeaLouiEoOaLoum6k%2BaLouaemuaLoumygeaLouiEveaLouiEneaLoueOq%2BaLouiEpuaLouiEveaLouaiheaLouWNpOaLouiEreaLoueMq%2BaLouiEveaLoumygeaLouWNr%2BaLouiMq%2BaLouaOs%2BaLouebsuaLouWNpOaLouWNr%2BaLouiOveaLouiEveaLoum6k%2BaLouiEpuaLouebsuaLouiEveaLouebsuaLoumygeaLouiMq%2BaLouaOs%2BaLouiEm%2BaLouWNpOaLouWNr%2BaLouiEn%2BaLouiEveaLoum5v%2BaLouW4veaLouiEm%2BaLouiZj%2BaLouiEquaLoui1guaLoueMq%2BaLoui0uOaLouWqkgrpqbTnn5vohKDmpbzljaTohKDohKDnnInohJ3pmYbohKTnr5PohKTosKnpmYbnpoTmjrPohKHmi6LpmoYK6JmP56aE6ISq6ZmL6ISt6IS15o6z6ISp6ISu6IqS6Lev6IS76ISo6ISc6ISn5Z6E6ISz6ZmL6Lev5Z6E6LWC6YW26ISd55uy6ISj5rKh6ISg6ISj6ISV6ISj5oui5Y2i6ISq6ZmL6ISi6ISf5Y2k56aE6Lev5Z6E6ISn6ISw5oiu6ISl6ISt6Iyr6LWC6IqS6ISV6ISj5oui6ZqGCg>)
+[![decode](./images/decode.jpg)](<https://gchq.github.io/CyberChef/#recipe=Encode_text('Simplified%20Chinese%20GBK%20(936)')Encode_text('ISO-8859-1%20Latin%201%20Western%20European%20(28591)')Decode_text('Simplified%20Chinese%20GBK%20(936)')&input=CuiEpuiEqum5v%2BalvOiEneiEneiEleiEoyDmi6LohKDmi6LosKnmi6LojKvmi6Lmr5vmi6LmsJPmi6Losozmi6Lojr3mi6LosKnmi6Lpk4bmi6LmsJMg56KM6ISb6Lev6ZWB6ISm5bi96ISd5qKF5oui5Y2i6ISl56KM56KM6ZmG6ISV6ISj6ISj55yJ6ISZ6ISf56KM6ISbIOaLouW/meaLouefm%2BaLouiwqeaLouiOveaLouWNouiEp%2BiEsOiEreiEt%2BiEpuiEquaOs%2BiEqSDmi6Llv5nmi6Lnn5vmi6LosKnmi6Lojr0g6Lev5Z6E6LWC6YW26ISb6Iyr5oui5r2eCuaLouW/meaLouefm%2BaLouiwqeaLouiOveaLouayoeaLouiEoOaLoum6k%2BaLouaemuaLoumygeaLouiEveaLouiEneaLoueOq%2BaLouiEpuaLouiEveaLouaiheaLouWNpOaLouiEreaLoueMq%2BaLouiEveaLoumygeaLouWNr%2BaLouiMq%2BaLouaOs%2BaLouebsuaLouWNpOaLouWNr%2BaLouiOveaLouiEveaLoum6k%2BaLouiEpuaLouebsuaLouiEveaLouebsuaLoumygeaLouiMq%2BaLouaOs%2BaLouiEm%2BaLouWNpOaLouWNr%2BaLouiEn%2BaLouiEveaLoum5v%2BaLouW4veaLouiEm%2BaLouiZj%2BaLouiEquaLoui1guaLoueMq%2BaLoui0uOaLouWqkgrpqbTnn5vohKDmpbzljaTohKDohKDnnInohJ3pmYbohKTnr5PohKTosKnpmYbnpoTmjrPohKHmi6LpmoYK6JmP56aE6ISq6ZmL6ISt6IS15o6z6ISp6ISu6IqS6Lev6IS76ISo6ISc6ISn5Z6E6ISz6ZmL6Lev5Z6E6LWC6YW26ISd55uy6ISj5rKh6ISg6ISj6ISV6ISj5oui5Y2i6ISq6ZmL6ISi6ISf5Y2k56aE6Lev5Z6E6ISn6ISw5oiu6ISl6ISt6Iyr6LWC6IqS6ISV6ISj5oui6ZqGCg>)
 
 ## 自复读的复读机
 
@@ -400,10 +400,10 @@ for i in range(sys.maxunicode + 1):
     up = c.upper()
     if up in 'FLAG' and c not in 'FLAGflag':
         print(c, up)
+        # ﬂ FL
         break
 
 # flag{badunic0debadbad_xxxxxx}
-# ﬂ
 ```
 
 ### UTF-7 到 UTF-8 转换工具
@@ -575,7 +575,7 @@ flag{Fxurier_xptics_is_fun}
 
 题目提示 `老旧 Python 网站`、`身份认证`、`依赖的版本` 配合网站的注释 `<!-- Powered by FastAPI, Axios and Vue.js -->` 可以知道这题是想让我们找到 [FastAPI](https://fastapi.tiangolo.com/) 的 jwt 漏洞。
 
-用 `python jwt vulnerability` 为关键字搜索了解相关资料，尝试把 `alg` 改成 `none` ，经过测试~~和观察题目通过人数~~推断行不通
+用 `python jwt vulnerability` 为关键字搜索了解相关资料，尝试把 `alg` 改成 `none` ，经过测试~~和观察题目通过人数~~推断行不通。
 
 深入搜索发现 [CVE-2017-11424](https://nvd.nist.gov/vuln/detail/CVE-2017-11424) 符合我们的利用条件。但是我们还缺少服务器的 public key，可以通过是读 FastAPI 文档知道网站会在 `/docs` 目录下自动生成 API 文档~~或者使用 [webdirscan
 ](https://github.com/TuuuNya/webdirscan) 之类的工具扫描网站目录~~，然后从文档里的 `debug` 接口获得公钥。
