@@ -15,6 +15,8 @@
 
 ## 14: 来自未来的 ~~D-Mail~~
 
+[Kotlin 源码](./KotlinProject/src/main/kotlin/org/hydev/experiment/CTFQR.kt)
+
 （会有 3020 的考古队看到这个嘛w？:thinking:
 
 1. 把 QR **解析**成 `byte[]` 然后写到文件里（和 rawBytes 不一样哦！
@@ -51,6 +53,8 @@ Python 的库试过的: zbar 装不上，qrtools 不能用来解析，pyzbar 很
 
 ## 15. 狗狗银行 🐶🏦
 
+[Kotlin 源码](./KotlinProject/src/main/kotlin/org/hydev/experiment/CTFDoggyBank.kt)
+
 ### 数学方面的
 
 1. 信用卡欠 2099 的话每天的利息是 10.49（10），实际利率是 4.99%
@@ -83,6 +87,8 @@ Python 的库试过的: zbar 装不上，qrtools 不能用来解析，pyzbar 很
 
 ## 16. ∫(超基础的数理模拟器)dx
 
+[Kotlin 源码](./KotlinProject/src/main/kotlin/org/hydev/experiment/CTFIntegrals.kt)
+
 虽然不是最高效的解但是视觉效果超厉害的！！  
 **视频链接:** [ビリビリ](https://www.bilibili.com/video/BV16a411c7jN/) | [YouTube](https://youtu.be/8L2TkLmXngQ)
 
@@ -106,6 +112,8 @@ Sage 看了下但是不知道怎样在程序里面控制w
 <br>
 
 ## 19. 超恶臭的数字论证器 (确信)
+
+[Kotlin 源码 (是最乱的一个 ;-;)](./KotlinProject/src/main/kotlin/org/hydev/experiment/CTF114514.kt)
 
 原来官方解法那么简单哇w  
 代码短 20 倍了！！！(╯‵□′)╯︵┻━┻
@@ -139,6 +147,8 @@ Sage 看了下但是不知道怎样在程序里面控制w
 <br>
 
 ## 31. 超迷你的挖矿模拟器 ⛏️
+
+[Kotlin 源码](./KotlinProject/src/main/kotlin/org/hydev/experiment/CTFMiniMiner.kt)
 
 1. 挖掉 Flag 位置（1,1）的方块w（5s
 2. 开始挖 Flag 位置的空气，  
