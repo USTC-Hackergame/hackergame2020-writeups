@@ -44,11 +44,10 @@ face_indecies = list(chunked(struct.unpack(f'< {len(face_indecies_raw) // 4}i', 
 
 with open('./model.obj', 'w', encoding='utf-8') as f:
     for vertex in vertices:
-        (x, y, z) = vertex[:3]
-        f.write(f'v {x} {y} {z}\n')
-    for vertex in vertices:
-        (x, y, z) = vertex[3:6]
-        f.write(f'vn {x} {y} {z}\n')
+        (pos_x, pos_y, pos_z) = vertex[:3]
+        f.write(f'v {pos_x} {pos_y} {pos_z}\n')
+        (normal_x, normal_y, normal_z) = vertex[3:6]
+        f.write(f'vn {normal_x} {normal_y} {normal_z}\n')
     for face in face_indecies:
         (x, y, z) = face
         f.write(f'f {x + 1}//{x + 1} {y + 1}//{y + 1} {z + 1}//{z + 1}\n')
