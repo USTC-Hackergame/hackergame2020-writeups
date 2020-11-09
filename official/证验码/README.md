@@ -31,7 +31,7 @@ pix(captcha) = sum(pix(c) for c in captcha) = sum(n(captcha, x) * pix(x) for x i
 
 如果我们把字符集中所有字符的 pix() 计算出，就可以排列成维度为 (62, 255) 的字体像素矩阵 A，其中 aij 代表第 i 个字符的图像有多少个像素值为 j 的像素。同时将 shuffle 后验证码整体统计得到的 pix() 计算出，记为维度为 255 的向量 b，那么我们想要求解的就是字符数量就是维度为 62 的向量 x = (n(captcha, 'a'), n(captcha, 'b'), ...)，并且有以下方程：
 
-Ax = b,
+A^T.x = b,
 
 啊这。这不是线性方程吗，还是个超定线性方程组，解就完事儿了。
 
@@ -39,7 +39,7 @@ Ax = b,
 
 噪音使得上式不完全相等，不能应用一些精确求解办法。首先我们在统计 pix(captcha) 时忽略所有彩色的像素，由于彩色的噪声遮盖了部分字符，我们的 b 会比真实的 b_true 略小一点，这样得到的方程是：
 
-A^T x = b_true - noise,
+A^T.x = b_true - noise,
 
 其中 noise 为非负的噪音。
 
