@@ -74,6 +74,9 @@
 | [met](https://github.com/MetLee/hackergame2020-writeups) | 75名的菜鸡化学僧 | 签到, 猫咪问答++, 2048, 一闪而过的 Flag, 从零开始的记账工具人, 超简单的世界模拟器, 自我复读的复读机, ~~233 的字符串工具, 233 同学的 Docker, 来自一教的图片, 超简陋的 OpenGL 小程序, 生活在博弈树上-1, 狗狗银行, 超基础的数理模拟器~~, 超精巧的数字论证器, ~~不经意传输-1~~ （施工中） |
 | [新城旧梦](https://www.itxcjm.top/179/) |总排名第28 本人将搭建部分题目永久镜像| 签到，2048，一闪而过的flag，从零开始的记账工具人，233同学的字符串工具，233同学的Docker，从零开始的HTTP链接，来自一教的图片，超简陋的OpenGL小程序，超简陋的OpenGL小程序，生活在博弈树上-1，来自未来的信笺，狗狗银行，室友的加密硬盘，超简易的网盘服务器，超安全的代理服务器-1，不经意传输-1 |
 | [WEGFan](players/WEGFan/) | | 超简陋的 OpenGL 小程序 |
+
+在[本仓库的 issues](https://github.com/USTC-Hackergame/hackergame2020-writeups/issues) 中亦有一些零散的题解。
+
 ## 其他资源
 
 [搞笑 Flag & 花絮](./behind-the-scenes/README.md)
