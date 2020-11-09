@@ -67,6 +67,8 @@ x = xf.round().astype(np.int).tolist()
 
 本题也可以用线性回归、神经网络等，直接拟合 pix(captcha) -> x 的映射关系，准确率足以通过本题。
 
+如果使用上述优化思路，带 L1 正则的优化方法（如：Lasso）抵抗噪音的能力更强。
+
 ## 完整程序
 
 见 [payload.py](payload.py)。
