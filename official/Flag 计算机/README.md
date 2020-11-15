@@ -36,6 +36,22 @@
 有了这样一个 opcode 会有怎么样的行为呢？
 
 ![](pics/5.png)
+<font color="#dd0000">感谢 @HarukaMa：https://github.com/USTC-Hackergame/hackergame2020-writeups/issues/45#issue-741718410 
+
+出题人：😭 现在修一下图片错误。“此题中 DS 和 SS 的差值就会导致直接在 IDA 中转换内存引用会产生不正确的结果。” 这是一部分原因，实际上偏移0x100。
+
+在 x86 realmode 下 cpu 通过 segment selector 来选择数据。 
+![](pics/12.png)
+这样的组合使得我们的程序能够索引地址 0 - 2 ** 20 的数据。
+约定的调用组合为 CS ：IP、 SS ：SP
+CS 是 code segment的缩写。SS 是 Stack segment的缩写。 DS 是 Data segment的缩写。
+一般而言段选择字在 realmode 里翻译为段寄存器。一般在protect mode 和 long mode 中称为段选择子。他们主要是为内存分段而存在的。内存分段又是为了区分数据和代码存在的同时一些段的属性还承担着保护的作用，比如不可写，不可读的功能等。
+</font><br/>
+将ida改为以下的设置即可。实际就是把它删了然后重建一个就行。这里保证cs=ds=ss
+![](pics/13.png)
+
+
+
 
 可以看到 operand size 变为了 32bit。
 我们分析 102f 这个函数。
@@ -54,7 +70,7 @@ asm (".code16gcc\n"
 这个文件中的一个伪指令 ".code16cc" 代表着让gcc生成 16bit realmode 模式的汇编指令。所以这是为什么大量指令前都有 0x66 的原因。当我们的操作数是类似于 uint32 声明时，0x66 就会起作用。
 逆向的核心过程就是明白程序干了哪些事情，橙色的操作数代表着地址，我们将鼠标悬停在上面，然后右键把它类型转换一下。
 
-![](pics/7.png)
+![](pics/14.png)
 
 IDA 就能识别字符串了。
 ps: 作为一个CTF玩家，我最喜欢的事情就是按 F5 ，hackergame 是为了让人能学到东西，而不是千篇一律的难题，不是为了难而难。所以我程序在 realmode 下，IDA 失效了，这样大家都能从 “0” 接触汇编。
@@ -108,15 +124,15 @@ for(short i=0; i<30;i++)
 删除掉我们的不重要的 delay 逻辑和输出逻辑就剩下这些了。很明显初始化的时候会取一个 0～58379 之间的数字作为 a ，我在生成flag的时候使用的是 26141。然后使用线性同余发生器生成15个伪随机数。
 下图是生成15个伪随机数的逻辑代码：
 
-![](pics/9.png)
+![](pics/15.png)
 
 下图是生成目标异或数组的核心逻辑：
 
-![](pics/10.png)
+![](pics/16.png)
 
 下图是 xor 常量的核心逻辑，就是这段在使用这个库的时候出了 bug 。
 
-![](pics/11.png)
+![](pics/17.png)
 
 最后 dump 出常量，小于 2**16 的爆破量就可以将 flag 爆破出来。
 
