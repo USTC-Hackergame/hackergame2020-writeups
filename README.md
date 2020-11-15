@@ -86,6 +86,8 @@
 
 [搞笑 Flag & 花絮](./behind-the-scenes/README.md)
 
+[纪念衫](./T-shirt/README.md)
+
 - [中国科学技术大学第六届信息安全大赛（Hackergame 2019）题解](https://github.com/ustclug/hackergame2019-writeups)
 - [中国科学技术大学第五届信息安全大赛（Hackergame 2018）题解](https://github.com/ustclug/hackergame2018-writeups)
 - [中国科学技术大学第四届信息安全大赛（Hackergame 2017）题解](https://volltin.gitbooks.io/hackergame2017-writeup/)
