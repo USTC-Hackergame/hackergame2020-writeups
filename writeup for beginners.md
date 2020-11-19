@@ -27,17 +27,17 @@ cmd里运行即可，出flag直接复制粘贴
 
 # 8 自复读的复读机
 python代码，不解释
-'''python
+```python
 s='s=%r;print((s%%s)[::-1],end="")';print((s%s)[::-1],end="")
-'''
-'''python
+```
+```python
 import hashlib;s='import hashlib;s=%r;print(hashlib.sha256((s%%s).encode()).hexdigest(),end="")';print(hashlib.sha256((s%s).encode()).hexdigest(),end="")
-'''
+```
 
 # 12 来自一教的图片
 傅里叶光学，就很好想了。代码如下：
-'''mathematica
+```mathematica
 a = Import["_the picture_"] // ImageData
 b = Fourier[a]
 Abs[b] // Image
-'''
+```
