@@ -79,7 +79,7 @@
 | [chuangzhu](players/chuangzhu/README.md) | | 签到, 猫咪问答++, 233 同学的 Docker, 从零开始的记账工具人, 自复读的复读机, 233 同学的字符串工具, 从零开始的火星文生活, 超基础的数理模拟器, 超简单的世界模拟器, 从零开始的 HTTP 链接, 超精巧的数字论证器, 超安全的代理服务器-1, 来自未来的信笺, 狗狗银行 |
 | [stefan0us](players/stefan0us/writeup.md) | | 签到, 猫咪问答++, 2048, 一闪而过的 Flag, 从零开始的记账工具人, 超简单的世界模拟器, 自复读的复读机, 233 同学的字符串工具, 233 同学的 Docker, 从零开始的 HTTP 链接, 来自一教的图片, 超简陋的 OpenGL 小程序, 生活在博弈树上-1, 狗狗银行, 超基础的数理模拟器, 不经意传输-1 |
 | [renbaoshuo](players/renbaoshuo/README.md) | [博客上的writeup](https://baoshuo.blog/post/ustc-hackergame-2020-write-up/)<br>初三不学文化课来打hackergame的菜鸡 | 签到, 2048, 一闪而过的 Flag, 猫咪问答++, 233 同学的 Docker |
-| [yssickjgd](players/yssickjgd/README.md) | 真的萌新 | 签到, 猫咪问答++, 2048, 一闪而过的 Flag, 从零开始的记账工具人, 超简单的世界模拟器, 从零开始的火星文生活, 自复读的复读机, 来自一教的图片 |
+| [yssickjgd](players/yssickjgd/writeup-for-beginners.md) | 真的萌新 | 签到, 猫咪问答++, 2048, 一闪而过的 Flag, 从零开始的记账工具人, 超简单的世界模拟器, 从零开始的火星文生活, 自复读的复读机, 来自一教的图片 |
 
 在[本仓库的 issues](https://github.com/USTC-Hackergame/hackergame2020-writeups/issues) 中亦有一些零散的题解。
 
