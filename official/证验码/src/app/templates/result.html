@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/main.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <title>{{ "SHUFFLE VAULT" | shuffle(shuffle_mode=shuffle_mode) }}</title>
+    </head>
+    <body class="text-center">
+        <form class="form-getflag" action="result" method="GET">
+            <div id="app">
+                <h1>{{ "SHUFFLE VAULT" | shuffle(shuffle_mode=shuffle_mode) }}</h1>
+                
+                {% if gotit %}
+                    <div class="alert alert-success" role="alert">
+                        {{ msg }}
+                    </div>
+                {% else %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ msg | shuffle(shuffle_mode=not shuffle_mode) }}
+                    </div>
+                {% endif %}
+
+                <a class="btn btn-lg btn-info btn-block" href="/">{{ "回到主页" | shuffle(shuffle_mode=shuffle_mode) }}</a>
+            </div>
+        </form>
+        <script src="static/jquery.min.js"></script>
+        <script src="static/bootstrap/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

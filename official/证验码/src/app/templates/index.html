@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/main.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <title>{{ "SHUFFLE VAULT" | shuffle(shuffle_mode=shuffle_mode) }}</title>
+    </head>
+    <body class="text-center">
+        <form class="form-getflag" action="result" method="GET">
+            <div id="app">
+                <h1>{{ "SHUFFLE VAULT" | shuffle(shuffle_mode=shuffle_mode) }}</h1>
+                <img src="{{ "captcha_shuffled.bmp" if shuffle_mode else "captcha.bmp" }}">
+                <div class="alert alert-info" role="alert">
+                    {{ "通知：为了网站更加人性化，近期我们对交互方式进行了改进，没有键盘的用户也能准确输入验证码。" | shuffle(shuffle_mode=shuffle_mode) }}
+                </div>
+                {% for c in alphabet %}
+                <div class="form-group row">
+                    <label class="col-4"><code>{{ (c + " 的个数") | shuffle(shuffle_mode=shuffle_mode) }}</code></label> 
+                    <div class="col-8">
+                      {% for i in range(17) | shuffle(shuffle_mode=shuffle_mode): %}
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input name="r_{{c}}" id="r_{{c}}_{{i}}" type="radio" class="custom-control-input" value="{{ i }}"> 
+                        <label for="r_{{c}}_{{i}}" class="custom-control-label">{{ i }}</label>
+                      </div>
+                      {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+
+                <input type="submit" class="btn btn-lg btn-primary btn-block" value="{{ "提交验证" | shuffle(shuffle_mode=shuffle_mode) }}" />
+                {% if shuffle_mode: %}
+                    <a class="btn btn-lg btn-danger btn-block" href="/">{{ "退出 SHUFFLE 翻转" | shuffle(shuffle_mode=shuffle_mode) }}</a>
+                {% else: %}
+                    <a class="btn btn-lg btn-danger btn-block" href="/shuffle">{{ "开启 SHUFFLE 翻转" | shuffle(shuffle_mode=shuffle_mode) }}</a>
+                {% endif %}
+            </div>
+        </form>
+        <script src="static/jquery.min.js"></script>
+        <script src="static/bootstrap/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

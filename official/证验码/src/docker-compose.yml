@@ -1,0 +1,7 @@
+version: "3"
+services:
+  captcha:
+    restart: always
+    build: .
+    ports:
+      - "10150:80"
