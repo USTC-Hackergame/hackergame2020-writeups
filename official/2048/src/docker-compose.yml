@@ -1,0 +1,7 @@
+version: "3"
+services:
+  flxg2048:
+    restart: always
+    build: .
+    ports:
+      - "10005:80"
