@@ -1,5 +1,27 @@
 # 签到
 
+- 题目分类：web
+
+- 题目分值：50
+
+谢邀，利益相关：老签到出题人了。
+
+今年出题组的要求是「来参加我们比赛的同学很多都是初学者，我们的签到题要清晰明确一点，让同学们轻松签到。」
+
+我完全明白了，签到题就是送 flag，送就送，我最会送了.jpg
+
+首先写好题目介绍：**「你需要点击下面蓝色的 “打开/下载题目” 按钮，在打开的网页上获取到形如 `flag{...}` 的 flag，回到本页面，将其完整填写到下面的文本框中，并点击灰色的 “提交” 按钮即可完成本题。」**
+
+然后写一个 flag 提取器，选手要多少个 flag，我就给多少个 flag，绿色背景，红色加粗，显眼的位置，标准的格式，这都不叫送，那还有什么叫做送。
+
+点击 **「打开/下载题目」** 按钮，打开 flag 提取器，获取第一个 flag 吧！
+
+提示：完成题目遇到困难？你可以参考 [2018 年签到题题解](https://github.com/ustclug/hackergame2018-writeups/tree/master/official/qiandao) 与 [2019 年签到题题解](https://github.com/ustclug/hackergame2019-writeups/blob/master/official/%E7%AD%BE%E5%88%B0%E9%A2%98/README.md)。
+
+[打开/下载题目](http://202.38.93.111:10000/?token={token})
+
+---
+
 这道题继承了 [去年的签到题](https://github.com/ustclug/hackergame2019-writeups/blob/master/official/%E7%AD%BE%E5%88%B0%E9%A2%98/README.md)，同样也需要在浏览器中动点手脚。
 
 ## 题目分析

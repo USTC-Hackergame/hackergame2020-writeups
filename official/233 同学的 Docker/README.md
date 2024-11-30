@@ -1,5 +1,19 @@
 # 233 同学的 Docker
 
+- 题目分类：general
+
+- 题目分值：150
+
+233 同学在软工课上学到了 Docker 这种方便的东西，于是给自己的字符串工具项目写了一个 Dockerfile。
+
+但是 233 同学突然发现它不小心把一个私密文件（`flag.txt`）打包进去了，于是写了一行命令删掉这个文件。
+
+「既然已经删掉了，应该不会被人找出来吧？」233 想道。
+
+- Docker Hub 地址：[8b8d3c8324c7/stringtool](https://hub.docker.com/r/8b8d3c8324c7/stringtool)
+
+---
+
 [这道题的 Dockerfile](./src/Dockerfile)
 
 ## 命题背景与思路

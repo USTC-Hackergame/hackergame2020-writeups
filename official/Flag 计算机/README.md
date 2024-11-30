@@ -1,4 +1,19 @@
 # Flag 计算机
+
+- 题目分类：binary
+
+- 题目分值：300
+
+一个玄学的 flag 计算机，平常的时候只会摸鱼，但如果在**合适的时间**运行它的话，它就可以告诉你真正的 flag。
+
+**提示 1：请大家着重于最后生成打印 flag 的逻辑，忽略其他无关代码**
+
+**提示 2：本题的旧版附件（[点击下载](src/get_flag_system/files/get_flag_system.exe)）存在问题，我们已经将其修复，请各位选手解题时使用新版附件（点击下方按钮下载）。题目的 flag 保持不变。**
+
+[打开/下载题目](src/get_flag_system/get_flag_system_fixed.exe)
+
+---
+
 此题目基于 [https://github.com/skeeto/dosdefender-ld31](https://github.com/skeeto/dosdefender-ld31) 修改而成。
 
 ```
